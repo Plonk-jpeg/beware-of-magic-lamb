@@ -1,0 +1,2479 @@
+/*Declaration de font*/
+@font-face {
+	font-family: 'Gotham';
+	src: url('../ressources-Botml/fonts/Gotham.ttf');
+}
+
+@font-face {
+	font-family: 'Cairo';
+	src: url('../ressources-Botml/fonts/Cairo.ttf');
+}
+
+/*Variable font*/
+
+/*Parametre css*/
+
+:root {
+	--main-typo: 'Gotham';
+}
+
+/*-------------------------Mobile-first------------------------*/
+.blocker{
+	 position: fixed; 
+}
+
+.lock-scroll {
+	overflow: hidden;
+	height: 100%;
+}
+
+.unlock-scroll {
+	overflow: inherit;
+	height: 0%;
+}
+
+/*Affichage masquage 320px*/
+/*Affichage masquage 320px*/
+/*Affichage masquage 320px*/
+
+/*Menu desktop-768*/
+.header-menu-tablet-desktop {
+	display: none;
+}
+
+/*Menu image intro-768*/
+video {
+	display: none;
+}
+
+/*Menu image intro-1024*/
+.container-intro-1024 {
+	display: none;
+}
+
+/*Image Instagram*/
+.instagram-section {
+	display: block;
+}
+
+.instagram-section-slider {
+	display: none;
+}
+
+/*Affichage masquage 320px*/
+/*Affichage masquage 320px*/
+/*Affichage masquage 320px*/
+
+/*Menu css-mobile*/
+/*Icone de navigation*/
+.header-menu-mobile-first {
+	display: block;
+	position: absolute;
+	top: 0.8%;
+	width: 100%;
+}
+
+.header-menu-mobile-first nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 10px;
+	font-size: 0.8rem;
+	color: white;
+}
+
+.fa-search {
+	margin-right: 200px;
+}
+
+.fa-shopping-bag {
+	color: white;
+}
+
+/*Icone de navigation*/
+
+/*Image header mobile*/
+.header-menu .header-menu-banner img:nth-last-child(4) {
+	position: relative;
+	z-index: -1;
+	width: 100%;
+}
+
+.header-menu .header-menu-banner a img {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-top: -5.9%;
+}
+
+.header-menu .header-menu-banner div {
+	position: relative;
+	z-index: -200;
+	top: -55px;
+	width: 100%;
+	height: 100px;
+	background-image: url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif);
+}
+
+.header-menu .header-menu-banner img:nth-child(4) {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 70px;
+	margin-top: -100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Image header mobile*/
+
+/*Surcouche menu*/
+.overlay {
+	height: 0%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-image: url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif);
+	overflow-y: hidden;
+	transition: 0.5s;
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 2rem;
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	color: white;
+	display: block;
+	transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #D68807;
+}
+
+.overlay .closebtn {
+	position: sticky;
+	top: 294px;
+	left: 62%;
+	font-size: 30px;
+}
+
+/*Surcouche menu*/
+/*Login*/
+.login-form {
+	position: static;
+	top: 280px;
+	right: 40%;
+}
+
+.login-form input,
+.login-form-button button {
+	display: block;
+	position: relative;
+	top: 55px;
+	margin: 10px auto;
+	border-radius: 20px;
+	padding: 5px 10px;
+	border: none;
+	font-family: var(--main-typo);
+	color: #D68807;
+
+}
+
+.login-form input::placeholder {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+}
+
+.overlay-login img {
+	position: relative;
+	top: 35px;
+	right: -200px;
+	transform: rotate(10deg);
+	width: 200px;
+}
+
+.login-form-button {
+	text-transform: uppercase;
+	font-size: 1rem;
+	padding: 0px;
+}
+.login-form-button a{
+	color: #D68807;
+	font-size: 1rem;
+	background-color: white;
+	border-radius: 20px;
+	margin: 0px 46%;
+	text-transform: uppercase;
+	position: relative;
+    top: -210px;
+}
+.login-form button {
+	color: #D68807;
+	font-size: 1rem;
+	padding: 0px 7px;
+	text-transform: uppercase;
+
+}
+
+.login-form-button button:last-child {
+	text-transform: uppercase;
+	padding: 4px 35px;
+}
+
+/*Login*/
+/*Barre de recherche*/
+#search {
+	position: absolute;
+	top: -1px;
+	left: 25%;
+	border: none;
+	border-radius: 20px;
+	width: 0%;
+	/*Important*/
+	cursor: text;
+	visibility: hidden;
+	transition: 0.4s;
+	padding-left: 10px;
+	font-family: var(--main-typo);
+}
+
+#search::placeholder {
+	opacity: 80%;
+}
+
+#search:focus {
+	outline: 0px;
+}
+
+#search.visible {
+	width: 47%;
+	visibility: visible;
+	text-transform: uppercase;
+	padding: 0px 5px;
+}
+
+#clear {
+	color: #D68807;
+	display: inline-block;
+	position: absolute;
+	right: 27%;
+	top: 1px;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+#clear.visible {
+	opacity: 100%;
+}
+
+#clear:hover {
+	cursor: pointer;
+}
+
+/*Barre de recherche*/
+
+/*Image slide mobile*/
+.mobile-img {
+	position: relative;
+	z-index: -10;
+	width: 100%;
+	margin-top: -20px;
+	margin-bottom: -21px
+}
+
+/*Image slide mobile*/
+/*dot hops*/
+.slider-dot {
+	display: flex;
+	justify-content: center;
+
+}
+
+.slider-dot img {
+	width: 15px;
+	margin-top: -20px
+}
+
+.dot {
+	width: 5%;
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+
+/*dot hops*/
+/*Bordure papier*/
+.intro img {
+	width: 100%;
+	opacity: 99%;
+}
+
+/*Bordure papier*/
+
+/*Image brasserie*/
+.intro h1 {
+	font-family: 'Cairo';
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 3.65rem;
+	text-align: right;
+	margin: -4px 0px 0px 0px;
+	padding: 20px 20px 10px 20px;
+	background-color: #EEEEF0;
+	margin-bottom: 18px;
+}
+
+.img-set {
+	display: block;
+	text-align: center;
+
+}
+
+.img-set img {
+	width: 100%;
+}
+
+.img-set-inline {
+	display: block;
+	width: 100%;
+	text-align: center;
+
+}
+
+.img-set-inline img {
+	width: 49.3%;
+}
+
+/*Image brasserie*/
+
+/*Nouvelles bieres*/
+main h2 {
+	font-size: 1.8rem;
+	font-family: 'Cairo';
+	font-weight: inherit;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*Nouvelles bieres*/
+
+/*Section Bouteilles*/
+.news-beer {
+	margin: 0px 25px;
+	margin-bottom: -35px
+}
+
+.news-beer-name:nth-child(odd):not(:first-child),
+.news-beer-name:nth-child(even) {
+	margin-top: -50px;
+}
+
+.news-beer-name:nth-child(odd) .news-beer-gif {
+	text-align: left;
+	margin-left: 175px;
+}
+
+.news-beer-name:nth-child(even) .news-beer-gif {
+	text-align: right;
+	margin-right: 175px;
+}
+
+/*Section Bouteilles*/
+
+/*Taille Bouteille*/
+.news-beer-gif img {
+	width: 70px;
+	margin-top: -95px;
+}
+
+.news-beer-name:nth-child(odd) .news-beer-gif img {
+	transform: rotate(90deg);
+	margin-left: -75px;
+}
+
+.news-beer-name:nth-child(even) .news-beer-gif img {
+	transform: rotate(-90deg);
+	margin-right: -75px;
+}
+
+/*Taille Bouteille*/
+
+/*Section Nombres*/
+.news-beer-name .news-beer-number img {
+	width: 60px;
+	margin: 0px -5px;
+}
+
+.news-beer-name:nth-child(odd) .news-beer-number {
+	margin: 0px 0px -5px -18px;
+}
+
+.news-beer-name:nth-child(even) .news-beer-number {
+	text-align: right;
+	margin: 0px 5px -5px 0px;
+
+}
+
+/*Section Nombres*/
+
+/*Section Texte*/
+.news-beer-text {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}
+
+.news-beer-text p:first-child {
+	font-size: 2rem;
+	margin: 0px;
+}
+
+.news-beer-name:nth-child(even) .news-beer-text {
+	text-align: right;
+}
+
+.news-beer-text p:last-child {
+	font-size: 0.8rem;
+	margin: -5px 0px 0px 0px;
+}
+
+/*Section Texte*/
+
+/*Image instagram 320px*/
+.instagram-section {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.instagram-section img {
+	width: 30%;
+}
+
+/*Image instagram 320px*/
+
+
+/*Footer*/
+footer {
+	background-blend-mode: lighten;
+	background-color: #D68807;
+	background-image: url(../ressources-Botml/image/pics/header-banner-animated-website-banner.gif);
+	background-size: cover;
+	clear: both;
+}
+.footer-text-label a{
+	text-decoration: none;
+}
+footer ul {
+	background-image: url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif)
+}
+
+
+.classlescouille {
+	width: 100%;
+	margin-bottom: 10px
+}
+
+.bgggg {
+	background-image: url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif);
+	margin-top: 65px;
+}
+
+.footer-text-label {
+	text-align: left;
+}
+
+.footer-text-label img {
+	float: left;
+	width: 55px;
+	margin: 0px 5px 0px 10px;
+
+}
+
+.footer-text-label p {
+
+	margin: auto;
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	font-size: 0.6rem;
+	color: white;
+
+}
+
+.footer-text-label object {
+	position: relative;
+	top: 4px;
+	right: 30px;
+	width: 16px;
+
+}
+
+.legal {
+	padding-top: 8px;
+}
+
+footer section a {
+	text-decoration: none;
+}
+
+/*Icone reseau sociaux*/
+/*Instagram*/
+footer ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 0px 100px 0px;
+	margin-bottom: 0px
+}
+
+footer ul li i:hover {
+	transition: 0.5s;
+}
+/*les autre valeur de background-clip ne rendent pas l'effet souhaité 
+
+footer ul li:nth-child(1) i:hover {
+	-webkit-transition: background 0.5s linear;
+
+	transition: background 0.5s ease-out;
+	
+
+	
+	background: radial-gradient(circle at 76% 100%, #fdf497 1%, #fdf497 3%, #fd5949 10%, #d6249f 5%, #285AEB 45%, white 50%);
+	
+	-webkit-text-fill-color: transparent;
+ 	-webkit-background-clip: text;
+  
+
+	color: transparent;
+	
+}*/
+
+footer ul li:nth-child(1) i {
+	background-position: 40px;
+	/*background-position: 100px;*/
+}
+
+/*Twitter*/
+footer ul li:nth-child(2) i:hover {
+	color: #00ACED;
+}
+
+/*Facebook*/
+footer ul li:nth-child(3) i:hover {
+	color: #4867AA;
+}
+
+/*Youtube*/
+footer ul li:nth-child(4) i:hover {
+	color: #F70000;
+}
+
+/*Twitch*/
+footer ul li:nth-child(5) i:hover {
+	color: #8C45F7;
+}
+
+/*Icone reseau sociaux*/
+footer ul {
+	padding: 25px 0px 25px 0px;
+}
+
+footer ul li:first-child i {
+	padding-left: 150px
+}
+
+footer ul li:last-child i {
+	padding-right: 150px
+}
+
+footer ul li i {
+	font-size: 1.5rem;
+	color: white;
+}
+
+footer ul li:first-child i {
+	padding-left: 50px
+}
+
+footer ul li:last-child i {
+	padding-right: 50px
+}
+
+/*Icone reseau sociaux*/
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*Display-Tablet*/
+@media screen and (min-width:768px) {
+
+	/*Affichage masquage 768px*/
+	/*Affichage masquage 768px*/
+	/*Affichage masquage 768px*/
+	.header-menu-mobile-first {
+		display: block;
+	}
+
+	.header-menu-mobile-first .icon-nav {
+		display: block;
+	}
+
+	.header-menu-mobile-first .bars {
+		display: none;
+	}
+
+	.header-menu-mobile-first .searchs {
+		display: none;
+	}
+
+	.slider-dot {
+		display: none;
+	}
+
+	.header-menu-tablet-desktop {
+		display: block;
+	}
+
+	.mobile-img {
+		display: none;
+	}
+
+	video {
+		position: relative;
+		z-index: -5;
+		display: block;
+	}
+
+	.instagram-section-slider {
+		display: none;
+	}
+
+	.icon-nav {
+		display: block;
+	}
+
+	/*Affichage masquage 768px*/
+	/*Affichage masquage 768px*/
+	/*Affichage masquage 768px*/
+
+	.header-menu {
+		margin-top: -8%;
+	}
+
+	.header-menu .header-menu-banner img:nth-last-child(4) {
+		z-index: 2;
+	}
+
+	.header-menu-mobile-first nav {
+		display: block;
+	}
+
+	.header-menu-mobile-first .icon-nav {
+		float: right;
+		position: relative;
+		top: 0px;
+		margin: 0px 0px 0px 6px;
+		margin-top: 4.5%;
+		color: white;
+	}
+
+	.icon-nav .fa-user:before {
+		margin-left: 10px;
+	}
+
+	.fa-shopping-bag:before {
+		content: "\f290";
+		color: white;
+	}
+
+	.icon-nav .fa-user:hover {
+		color: #D68807;
+	}
+
+	.icon-nav .fa-shopping-bag:hover {
+		color: #D68807;
+	}
+
+	/*Login*/
+
+	.overlay .closebtn {
+		position: sticky;
+		top: 282px;
+		left: 56.5%;
+	}
+
+	.header-menu-mobile-first .overlay-login {
+		position: relative;
+		top: 12%;
+		z-index: -200;
+		width: 100%;
+		text-align: center;
+		margin-top: -65px;
+	}
+
+	.header-menu .header-menu-banner a img {
+		position: relative;
+		z-index: 20;
+		width: 55%;
+		margin-top: -3%;
+	}
+
+	.header-menu-tablet-desktop {
+		display: block;
+		text-align: center;
+	}
+
+	.header-menu .header-menu-banner img:nth-child(4) {
+		position: relative;
+		z-index: 2;
+	}
+
+	.header-menu-tablet-desktop nav {
+		position: relative;
+		z-index: 20;
+		margin-top: -50px;
+	}
+
+	.header-menu-tablet-desktop nav a {
+		font-family: var(--main-typo);
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+		font-size: 1rem;
+		margin: 0px 5px;
+	}
+
+	.header-menu-tablet-desktop nav a:nth-child(2) {
+
+		margin-right: 100px;
+	}
+
+	/*Video*/
+	video {
+		margin-top: 13px;
+		margin-bottom: -17px;
+	}
+
+	.intro img {
+		width: 100%;
+		opacity: 99%;
+		margin-top: 5px;
+	}
+
+	.img-set-inline img {
+		width: 49.7%;
+	}
+
+	main h2 {
+		font-size: 3rem;
+		font-family: 'Cairo'
+	}
+
+	.intro h1 {
+		font-size: 7rem;
+	}
+
+	/*Bouteilles-tablet*/
+	/*Marge*/
+	.news-beer-gif img {
+		width: 125px;
+		margin-top: -175px;
+	}
+
+	.news-beer-name:nth-child(odd) .news-beer-gif {
+		text-align: left;
+		margin-left: 250px;
+	}
+
+	.news-beer-name:nth-child(even) .news-beer-gif {
+		text-align: right;
+		margin-right: 250px;
+	}
+
+	.news-beer-name:nth-child(odd):not(:first-child),
+	.news-beer-name:nth-child(even) {
+		margin-top: -140px
+	}
+
+	/*Insta*/
+
+
+	.classlescouille {
+		width: 100%;
+		margin-bottom: 10px
+	}
+
+
+	.footer-text-label {
+		text-align: left;
+	}
+
+	.footer-text-label img {
+		float: left;
+		width: 75px;
+		margin: 0px 5px 0px 10px;
+
+	}
+
+	.footer-text-label p {
+
+		margin: auto;
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		font-size: 1rem;
+		color: white;
+
+	}
+
+	.footer-text-label object {
+		position: relative;
+		top: 4px;
+		right: 30px;
+		width: 16px;
+
+	}
+
+	.legal {
+		padding-top: 8px;
+	}
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (min-width:1024px) {
+	/*Affichage masquage 1024px*/
+	/*Affichage masquage 1024px*/
+	/*Affichage masquage 1024px*/
+
+	.news-beer {
+		display: none;
+	}
+
+	.new-beers-1024 {
+		display: block;
+	}
+
+	.instagram-section {
+		display: none;
+	}
+
+	.instagram-section-slider {
+		display: block;
+	}
+
+	/*Affichage masquage 1024px*/
+	/*Affichage masquage 1024px*/
+	/*Affichage masquage 1024px*/
+	.login-form {
+		position: relative;
+		top: -114px;
+		right: 0%;
+	}
+
+	.overlay-login img {
+		position: relative;
+		top: 35px;
+		right: -300px;
+	}
+
+	.overlay .closebtn {
+		position: relative;
+		top: 25%;
+		left: 54.5%;
+	}
+
+	.instagram-section-slider {
+		display: block;
+	}
+
+	.slide {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.slide img {
+		width: 25%;
+	}
+
+	/*Masque la nav mobile*/
+
+
+	.intro img {
+		margin-top: -80px;
+		opacity: 99%;
+	}
+
+	video {
+		display: block;
+		width: 100%;
+	}
+
+	/*Intro texte & image*/
+	.container {
+		display: none;
+	}
+
+	.container-intro-1024 {
+		position: relative;
+		z-index: 1;
+		display: block;
+		background-color: #EDECED;
+		padding-bottom: 40px
+	}
+
+	.container-intro-1024 img:first-child {
+		position: relative;
+		top: -15px;
+		z-index: 1;
+		opacity: 99%;
+		width: 100%;
+	}
+
+	.intro-1024 h1 {
+		font-family: 'Cairo';
+		text-align: left;
+		font-size: 3rem;
+		width: 45%;
+		margin-top: 20px;
+		text-transform: uppercase;
+		font-weight: 100;
+	}
+
+	.intro-1024 {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0px 50px
+	}
+
+	.intro-1024 img {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 50%;
+		height: 50%;
+	}
+
+	.intro-1024 img + img {
+		margin-top: -10px
+	}
+
+	.intro-1024 img + img + img {
+		width: 24.5%;
+	}
+
+	.intro-1024 img:nth-child(3) {
+		width: 49%;
+	}
+
+	/*Partie Biere 1024*/
+	main h2 {
+		font-size: 3rem;
+		font-family: 'Cairo'
+	}
+
+	/*Reset*/
+	.news-beer-name:nth-child(odd):not(:first-child),
+	.news-beer-name:nth-child(even) {
+		margin-top: 0px;
+
+	}
+
+	.news-beer-name:nth-child(even) .news-beer-text {
+		text-align: inherit;
+	}
+
+	.news-beer-name:nth-child(odd) .news-beer-gif {
+		margin-left: 0px;
+	}
+
+	.news-beer-name:nth-child(even) .news-beer-gif {
+		margin-right: 0px;
+	}
+
+	.news-beer-name:nth-child(odd) .news-beer-number,
+	.news-beer-name:nth-child(even) .news-beer-number,
+	.news-beer-gif img {
+		margin: 0px;
+	}
+
+	.news-beer-gif img {
+		margin-top: 0px;
+	}
+
+	.news-beer-name:nth-child(even) .news-beer-gif img {
+		margin-right: 0px;
+	}
+
+	.news-beer-name:nth-child(odd) .news-beer-gif img {
+		margin-left: 0px;
+	}
+
+	/*Reset*/
+
+	.news-beer {
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 7% 75px 6%;
+	}
+
+	.news-beer-name {
+		display: flex;
+		position: relative;
+		right: 90px
+	}
+
+	.news-beer-name:nth-child(odd) .news-beer-gif img,
+	.news-beer-name:nth-child(even) .news-beer-gif img {
+		transform: rotate(0deg);
+		width: 100px;
+	}
+
+	.news-beer-number {
+		margin-top: -30px
+	}
+
+	.news-beer-number img {
+		display: flex;
+		transform: rotate(90deg);
+		position: relative;
+		right: -237px;
+		top: -27px
+	}
+
+	.news-beer-text {
+		display: flex;
+	}
+
+	.news-beer-text p {
+		writing-mode: vertical-rl;
+		position: relative;
+		right: -145px;
+	}
+
+	.news-beer-text p:nth-child(1n+2) {
+		margin: 0px -10px;
+		position: relative;
+		right: -110px;
+	}
+
+
+	.instagram-section-slider {
+		display: flex;
+	}
+	.instagram-section-slider img{
+	width: 25%;
+	}
+	.instagram-section-slider fade {
+		display: flex;
+	}
+
+	/*Animation*/
+	.beer-animation:hover img {
+
+		animation: beerRotation 1s ease 0s 1;
+
+		transform-origin: center bottom;
+	}
+
+	@keyframes beerRotation {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		15% {
+			transform: rotate(3deg);
+		}
+
+		30% {
+			transform: rotate(-3deg);
+		}
+
+		45% {
+			transform: rotate(2deg);
+		}
+
+		60% {
+			transform: rotate(-2deg);
+		}
+
+		75% {
+			transform: rotate(1deg);
+		}
+
+		90% {
+			transform: rotate(-1deg);
+		}
+
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	/* Animation fondu*/
+	.fade {
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0.8
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+
+	footer section {
+		width: 50%;
+		margin-top: -19%;
+		margin-left: 17%;
+	}
+
+	footer p {
+		font-size: 0.8rem;
+	}
+
+	footer section:last-of-type {
+		margin: 20px 45px 180px;
+	}
+
+	footer img:nth-child(2) {
+		float: right;
+		width: 30%;
+		margin-right: 5%;
+	}
+
+	footer img:nth-child(3) {
+		width: 10%;
+		margin-left: 5%;
+	}
+
+	footer ul li i {
+		font-size: 2rem;
+		color: white;
+	}
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (min-width:1440px) {
+
+	/*Affichage masquage 1440px*/
+	/*Affichage masquage 1440px*/
+	/*Affichage masquage 1400px*/
+
+	/*Affichage masquage 1440px*/
+	/*Affichage masquage 1440px*/
+	/*Affichage masquage 1400px*/
+	.header-menu-mobile-first .overlay-login {
+		position: relative;
+		z-index: 200;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+		margin-top: -65px;
+	}
+
+
+	.overlay-login img {
+		position: relative;
+		top: -194px;
+		right: -300px;
+	}
+
+	.login-form {
+		position: relative;
+		top: -50px;
+		right: 0%;
+	}
+
+	.login-form input,
+	.login-form-button button {
+		position: relative;
+		top: -210px;
+	}
+
+	.overlay .closebtn {
+		position: relative;
+		z-index: 200;
+		position: relative;
+		top: 28.5%;
+		left: 53.5%;
+	}
+
+	.intro-1024 h1 {
+		width: 45%;
+		font-size: 4.5rem;
+		width: 45%;
+		margin-bottom: 0px;
+	}
+
+	.intro-1024 img {
+		margin-top: 20px;
+		margin-bottom: 0px;
+		width: 50%;
+		height: 50%;
+	}
+
+	.intro-1024 img + img {
+		margin-top: 15px
+	}
+
+	/*section biere desktop*/
+	.beer-1024 img {
+		width: 200px;
+		margin-right: 20px;
+	}
+
+	.beer-1024 div img {
+		width: 80px;
+	}
+
+	.beer-1024 div {
+		margin-top: -28px;
+	}
+
+	.block p {
+		font-size: 1.5rem;
+		margin: 0px -5px 0px -5px;
+	}
+
+	.block p:nth-child(2n+1) {
+		font-size: 4rem;
+
+	}
+
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Page-nos-bieres//////////////////
+*/
+/*Mobile*/
+
+.bg-beer-color {
+	position: absolute;
+	z-index: -100;
+	background-image: url(../ressources-Botml/image/pics/fond.gif);
+	background-size: cover;
+	background-color: #cecece;
+	margin-top: -19px;
+	height: 460px;
+	width: 100%;
+}
+
+.all-beer-products {
+	text-align: center;
+	margin-bottom: 75px;
+	margin-left: 25px;
+	margin-right: 25px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.beer-gif-product img {
+	margin-top: 75px;
+	width: 60px;
+}
+
+article.beer-article {
+	width: 50%;
+}
+
+#beer-name {
+	font-family: var(--main-typo);
+	font-size: 1.3rem;
+	margin: 0px;
+}
+
+#beer-style {
+	margin: 0px;
+	font-family: var(--main-typo);
+	font-size: 1rem;
+}
+
+#beer-price {
+	margin: 0px;
+	font-family: var(--main-typo);
+	font-size: 1rem;
+	margin-bottom: 15px
+}
+
+.separator {
+	background-image: url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif);
+	width: 100%;
+}
+
+.separator p:first-child {
+	font-size: 1.8rem;
+	padding: 20px;
+	margin-top: 15px;
+}
+
+.separator h2 {
+	font-family: var(--main-typo);
+	color: white;
+	padding: 20px;
+}
+
+.separator p {
+	font-family: var(--main-typo);
+	color: white;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.separator a {
+	text-decoration: none;
+	color: white;
+}
+
+.all-pack {
+	text-align: center;
+	margin-bottom: 75px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0px 15px;
+	margin-bottom: 75px;
+
+}
+
+.all-pack img {
+	margin-top: 75px;
+	width: 120px;
+}
+
+.btn-style-botml {
+	font-family: var(--main-typo);
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-decoration-line: none;
+	color: black;
+	border: 3px solid black;
+	background-color: white;
+	padding: 3px;
+}
+
+.btn-style-botml:hover {
+	transition: 0.7s;
+	box-shadow: 5px 6px 0px 0px black;
+}
+
+/*Tablet*/
+@media screen and (min-width:768px) {
+	.bg-beer-color {
+		position: absolute;
+		z-index: -100;
+
+		background-size: cover;
+		background-color: #cecece;
+		margin-top: 15px;
+		height: 430px;
+		width: 100%;
+	}
+
+	.bg-beer-color {
+		height: 580px;
+	}
+
+	article.beer-article {
+		width: 33%;
+		margin-bottom: 50px;
+	}
+
+	.separator h2 {
+		font-size: 2rem;
+	}
+
+	.all-pack img {
+		width: 190px;
+	}
+
+	.beer-gif-product img {
+		margin-top: 120px;
+		width: 75px;
+	}
+
+	.btn-style-botml {
+		font-size: 1rem;
+	}
+}
+
+/*Desktop*/
+@media screen and (min-width:1024px) {
+	.bg-beer-color {
+		height: 660px;
+	}
+
+	.all-beer-products {
+		text-align: center;
+		margin: 0px 150px;
+	}
+
+	.beer-gif-product img {
+		margin-top: 125px;
+		width: 100px;
+	}
+
+	article.beer-article {
+		width: 25%;
+	}
+
+	.btn-style-botml {
+		font-size: 1rem;
+	}
+
+	.btn-style-botml a:hover:nth-child(1n+3) {
+		transition: 0.7s;
+		box-shadow: 5px 6px 0px 0px black;
+	}
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Page-nos-bieres-focus//////////////////*/
+
+/*mobile*/
+
+.nos-bieres-focus .news-beer-number-desktop {
+	margin-bottom: -20px;
+
+}
+
+.nos-bieres-focus .news-beer-number-desktop img {
+	width: 60px;
+}
+
+.focus {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	margin: 75px 45px 55px;
+}
+
+.focus h1 {
+	font-family: var(--main-typo);
+	font-size: 1.5rem;
+	margin: 15px;
+	text-align: left;
+}
+
+.focus h2 {
+	font-family: var(--main-typo);
+	font-size: 1rem;
+	margin: 0px;
+	text-align: left;
+	margin-top: -15px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.quantity form {
+	width: 300px;
+	margin: 10px 0px 15px;
+}
+
+.value {
+	background-image: inherit;
+}
+
+.value-button {
+	display: inline-block;
+	border: 1px solid #ddd;
+	margin: 0px;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 11px 0;
+	background: #eee;
+
+}
+
+.value-button:hover {
+	cursor: pointer;
+}
+
+form #decrease {
+	margin-right: -4px;
+	border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+	margin-left: -4px;
+	border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+	margin: 0px;
+	padding: 0px;
+}
+
+input#number {
+	text-align: center;
+	border: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin: 0px;
+	width: 40px;
+	height: 40px;
+	padding: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.price {
+	font-size: 25px;
+	margin-top: -10px;
+}
+
+.focus .btn-style-botml {
+	font-size: 1rem;
+	border: 3px solid black;
+	padding: 5px;
+
+}
+
+.focus .btn-style-botml:hover {
+	transition: 0.7s;
+	box-shadow: 5px 6px 0px 0px black;
+}
+
+.product-beer img {
+	float: left;
+	width: 73px;
+	margin-right: 5%;
+}
+
+.desc-beer {
+	margin-top: 80px
+}
+
+.desc-beer h3 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	margin-top: -45px;
+	padding: 0px;
+}
+
+.desc-beer p {
+	font-size: 0.9rem;
+}
+
+.desc-beer ul {
+	margin: 35px 0px;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	padding: 8px 0px;
+}
+
+.desc-beer ul li {
+	list-style: none;
+	font-size: 0.8rem;
+}
+
+.nos-bieres-focus .separator {
+	padding: 10px 0px;
+}
+
+
+.nos-bieres-focus .beer-article {
+	margin-top: 50px;
+	width: 33%;
+}
+
+.nos-bieres-focus .beer-article img {
+	width: 120px;
+
+}
+
+/*tablet*/
+@media screen and (min-width:768px) {
+
+	.focus {
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		margin: 95px 150px 55px;
+	}
+
+	.focus h1 {
+		font-family: var(--main-typo);
+		font-size: 2rem;
+		margin: 15px;
+		text-align: left;
+	}
+
+	.product-beer img {
+		width: 70px;
+		margin-top: 0px;
+	}
+
+	.desc-beer h3 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+		margin-top: -50px;
+		padding: 0px;
+	}
+
+	.nos-bieres-focus .separator p {
+		font-size: 2rem;
+	}
+
+	.nos-bieres-focus .beer-article img {
+		width: 190px;
+	}
+
+	.nos-bieres-focus .all-beer-products {
+		margin-bottom: 0px;
+
+	}
+}
+
+/*desktop*/
+@media screen and (min-width:1024px) {
+	.focus {
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		margin: 150px 160px 55px;
+	}
+
+	.product-beer img {
+		width: 90px;
+
+	}
+
+	.desc-beer h3 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+		margin-top: -50px;
+		padding: 0px;
+	}
+
+	.beer-animation:hover img {
+
+		animation: beerRotation 1s ease 0s 1;
+
+		transform-origin: center bottom;
+	}
+
+	@keyframes beerRotation {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		15% {
+			transform: rotate(3deg);
+		}
+
+		30% {
+			transform: rotate(-3deg);
+		}
+
+		45% {
+			transform: rotate(2deg);
+		}
+
+		60% {
+			transform: rotate(-2deg);
+		}
+
+		75% {
+			transform: rotate(1deg);
+		}
+
+		90% {
+			transform: rotate(-1deg);
+		}
+
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+@media screen and (min-width:1440px) {
+	.focus {
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		margin: 70px 400px 55px;
+	}
+
+	.product-beer img {
+		width: 85px;
+	}
+
+	.separator p {
+		font-size: 2rem;
+	}
+
+	.nos-bieres-focus .beer-article img {
+		width: 200px;
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Page-brasserie/////////////////////////////*/
+
+.brewery-tour .brewery-tour img {
+	position: relative;
+	z-index: -200;
+	top: -19px;
+	width: 100%;
+}
+
+.brewery-tour .brewery-tour-article-text {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	margin: 0px 25px 30px;
+	font-size: 0.7rem;
+}
+
+.brewery-tour .brewery-tour-article-text h1 {
+	text-align: center;
+	font-size: 1.7rem;
+}
+
+.brewery-tour .brewery-tour-article-text h2 {
+	font-family: var(--main-typo);
+	font-size: 1.2rem;
+}
+
+.brewery-tour .brewery-tour-article-text p,
+.brewery-tour .brewery-tour-article-text ul {
+	text-align: justify;
+}
+
+.brewery-tour .brewery-tour-article-text li {
+	margin: 10px 0px 0px -20px;
+}
+
+.brewery-tour-ticket img {
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+/*tableau-mobile*/
+/*controle position taille svg*/
+.brewery-tour-reservation-img .ticket-asset {
+	display: none;
+}
+
+.brewery-tour-reservation {
+	margin-top: 75px;
+	margin-bottom: 75px;
+	border: 3px solid black;
+}
+
+.ticket-asset-extended {
+	position: absolute;
+	text-align: center;
+}
+
+.brewery-tour-reservation-img img {
+	z-index: -100;
+	width: 95%;
+}
+
+/*titre*/
+.brewery-tour-reservation-titles {
+	display: flex;
+	position: relative;
+	top: 5px;
+	justify-content: space-around;
+	margin: 0px 5px 0px 5px;
+}
+
+.brewery-tour-reservation-titles h1 {
+	position: relative;
+	left: -7%;
+	/**/
+	font-size: 1rem;
+	margin: 0px;
+	font-size: 1rem;
+	align-self: center;
+}
+
+.brewery-tour-reservation-titles h2 {
+	font-family: var(--main-typo);
+	font-size: 0.8rem;
+	width: 30%;
+	margin: 0px;
+}
+
+.brewery-tour-reservation-title-block {
+	font-family: var(--main-typo);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.brewery-tour-reservation-title-block p {
+	margin: 0px;
+}
+
+/*line*/
+.line {
+	position: relative;
+	top: 7px;
+	border: 1px solid black;
+	content: "";
+	margin: 0px auto;
+	width: 90%
+}
+
+.brewery-tour-reservation-subtitle {
+	display: flex;
+	margin-top: 10px;
+	justify-content: space-around;
+}
+
+/*gauche*/
+
+.brewery-tour-reservation-subtitle-left {
+	display: flex;
+	margin-top: 2px;
+}
+
+.brewery-tour-reservation-subtitle-left i {
+	margin-top: 1px;
+	font-size: 0.8rem
+}
+
+.brewery-tour-reservation-subtitle-left p {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	margin: 0px;
+	margin-left: 7px;
+}
+
+/*mois*/
+.brewery-tour-reservation-subtitle h3 {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	margin: 0px;
+	margin-top: -3px;
+}
+
+/*droite*/
+.brewery-tour-reservation-subtitle-right {
+	display: flex;
+	margin-top: 2px;
+}
+
+.brewery-tour-reservation-subtitle-right i {
+	margin-top: 1px;
+	font-size: 0.8rem
+}
+
+.brewery-tour-reservation-subtitle-right p {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	margin: 0px;
+	margin-right: 7px;
+}
+
+/*array*/
+.brewery-tour-reservation-calendar-array {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+}
+
+.brewery-tour-reservation-calendar-array table {
+	margin: 0px;
+	border-spacing: 5px;
+	padding: 0px;
+	width: 90%;
+	display: table;
+	table-layout: fixed;
+}
+
+.brewery-tour-reservation-calendar-array table thead th {
+	font-size: 0.8rem;
+	color: red;
+	padding: 0px;
+}
+
+.brewery-tour-reservation-calendar-array table tbody tr td {
+	font-size: 0.6rem;
+	padding: 2% 0px;
+	border: 1px solid grey;
+}
+
+.brewery-tour-reservation-calendar-array td:last-child {
+	color: red;
+}
+
+.brewery-tour-reservation-calendar-array td:hover {
+	border: 1px solid green;
+	background-color: palegreen;
+}
+
+.brewery-tour-reservation-calendar-array td:last-child:hover {
+	border: 1px solid red;
+	background-color: palevioletred;
+}
+
+.brewery-tour-reservation-calendar-array td:last-child {
+	border-color: red;
+	color: red;
+}
+
+.brewery-tour-reservation-calendar-array table tbody tr td span {
+	padding: 1px
+}
+
+
+/*tableau-mobile*/
+
+.brewery-tour-ticket-text {
+	background-image:
+		url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif);
+	padding: 25% 25px;
+	font-family: var(--main-typo);
+	font-weight: 100;
+	text-align: center;
+	color: white;
+}
+
+.brewery-tour-ticket-text p {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+.brewery-tour-ticket {
+	margin-bottom: 0px;
+}
+
+/*/////////////*/
+@media screen and (min-width:768px) {
+	.brewery-tour .brewery-tour img {
+		position: relative;
+		z-index: -200;
+		top: 13px;
+		width: 100%;
+	}
+
+	.brewery-tour .brewery-tour-article-text {
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		margin: 0px 45px 55px;
+		font-size: 1rem;
+		padding: 10% 45px;
+	}
+
+	/*tableau-tablet*/
+
+	.brewery-tour-reservation-calendar-array table tbody tr td {}
+
+
+	.brewery-tour-ticket-text {
+		padding: 35% 45px;
+		font-size: 1rem;
+
+	}
+}
+
+
+@media screen and (min-width:1024px) {
+	.brewery-tour .brewery-tour img {
+		width: 50%;
+
+	}
+
+	.brewery-tour-ticket-text {
+		background-image: none;
+	}
+
+	.brewery-tour .brewery-tour-article-text {
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		margin: 5% 0px 7% 0px;
+		padding: 0px 30px;
+		float: right;
+		width: 44%;
+		font-size: 0.7rem;
+	}
+
+	.brewery-tour .brewery-tour-article-text h1 {
+		text-align: center;
+		font-size: 1.8rem;
+		margin-top: 40px
+	}
+
+	.brewery-tour .brewery-tour-article-text h2 {
+		font-family: var(--main-typo);
+		font-size: 1.2rem;
+	}
+
+	.brewery-tour .brewery-tour-article-text p {
+		text-align: justify;
+		font-size: 0.7rem;
+	}
+
+	.brewery-tour .brewery-tour-article-text ul {
+		text-align: justify;
+		font-size: 0.7rem;
+	}
+
+	.brewery-tour .brewery-tour-article-text li {
+		margin: 10px 0px 0px -20px;
+	}
+
+	.brewery-tour-ticket {
+		display: flex;
+		margin-bottom: 20px
+	}
+
+	.brewery-tour-ticket img {
+		width: 50%;
+		vertical-align: middle;
+	}
+
+	.brewery-tour-ticket-text {
+		font-family: var(--main-typo);
+		text-transform: uppercase;
+		width: 50%;
+		font-size: 1rem;
+		padding: 0px 20px;
+		background-image: url(../ressources-Botml/image/pics/hop-tile-half-cut-speed-up-optimized.gif)
+	}
+
+	.brewery-tour-ticket-text h1 {
+		margin-top: 40%;
+
+	}
+
+	.brewery-tour-ticket {
+		margin-bottom: 0px;
+	}
+}
+
+/*/////////////*/
+@media screen and (min-width:1440px) {
+
+	.brewery-tour .brewery-tour img {
+		margin-bottom: 0px;
+	}
+
+	.brewery-tour .brewery-tour-article-text h1 {
+		font-size: 3rem;
+		margin-top: -5%;
+	}
+
+	.brewery-tour .brewery-tour-article-text h2 {
+		font-size: 1.5rem;
+	}
+
+	.brewery-tour .brewery-tour-article-text p,
+	.brewery-tour .brewery-tour-article-text ul {
+		font-size: 1.2rem;
+	}
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////shop/////////////////////////////*/
+
+.main-shop {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 100px;
+}
+
+.merch {
+	margin-top: 75px;
+}
+
+.merch:last-child {
+	margin-bottom: 75px;
+}
+
+.merch img {
+	width: 100%;
+
+}
+
+
+@media screen and (min-width:768px) {
+	.main-shop {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.merch {
+		width: 33%;
+	}
+
+	.merch img {
+		width: 95%;
+	}
+}
+
+@media screen and (min-width:1024px) {
+	.merch {
+		width: 25%
+	}
+}
+
+@media screen and (min-width:1440px) {
+	.merch img {
+		width: 90%;
+	}
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////nous trouver/////////////////////////////*/
+@media screen and (min-width:320px) {
+	.find-us div {
+		margin-top: 33px;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.find-us div {
+		margin-top: 33px;
+		margin-bottom: -20px;
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////index-crud/////////////////////////////*/
+
+table {
+	margin: 50px 6% 75px 6%;
+
+}
+
+table thead tr th {
+	font-size: 2rem;
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	color: black;
+}
+
+.v button {
+	font-size: 1rem;
+	margin-left: 10px;
+	text-transform: uppercase;
+
+}
+
+.v a {
+	text-decoration: none;
+	color: #cb0000;
+}
+
+table tbody {
+	font-size: 0.9rem;
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	color: #232222;
+}
+
+.table-row-name td {
+	color: #D68807;
+
+}
+
+.table-content:nth-child(even) {
+	background-color: #cecece;
+
+}
+
+.table-content:hover {
+	transition: 0.3s;
+	color: #D68807;
+}
+
+.a {
+	padding: 0px 23px;
+	margin-bottom: 35px;
+}
+
+.b {
+	margin-right: 10px;
+	margin-bottom: 40px;
+	color: black;
+	padding: 2px 15px;
+	background-color: lightgrey;
+	border: 1px solid;
+	border-radius: 5px;
+	border-color: dimgrey;
+	
+}
+
+.d {
+	background-color: white;
+
+}
+
+tbody tr td button {
+	margin-left: 25px;
+}
+
+tbody tr td button a {
+	text-decoration: none;
+	color: #232222;
+	text-transform: uppercase;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////edit/////////////////////////////*/
+
+h1 {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 35px;
+}
+
+.form-crud {
+	background-image: url(../ressources-Botml/image/pics/header-banner-animated-website-banner.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-color: #D68807;
+	border-width: thick;
+	border-radius: 25px;
+	padding: 17px;
+	text-align: left;
+	margin-left: 39%;
+	margin-right: 38%;
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	margin-bottom: 50px;
+
+}
+
+label {
+	margin-top: 20px;
+}
+
+.records-modif {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	padding: 0px 107px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////delete/////////////////////////////*/
+
+.delete {
+	margin-top: 50px;
+	text-align: center;
+
+}
+
+.delete img {
+	width: 650px;
+	-webkit-animation: fadein 8s;
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.return {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	color: black;
+	
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////panier/////////////////////////////*/
+
+.basket {
+	width: 100%
+}
+
+.basket-product {
+	display: flex;
+}
+
+.basket-row th {
+	text-align: left;
+	padding: 0px;
+}
+
+.basket-row th:nth-child(2) {
+	position: relative;
+	right: 15px;
+}
+
+.basket-row th:nth-child(3) {}
+
+.basket-product-img {
+	margin-right: 50px;
+	margin-bottom: 30px;
+}
+
+.basket-product-name p:first-child {
+	font-size: 1.2rem;
+	margin-top: 0px;
+	margin-bottom: -12px;
+}
+
+.basket-product-name p:nth-child(2) {
+	font-size: 0.8rem;
+	opacity: 50%;
+}
+
+.basket-product-name p {
+	font-size: 1rem;
+}
+
+.basket-product-name button {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	color: red;
+	margin-top: -10px;
+	margin-left: 0px;
+	padding: 0px;
+	background-color: inherit;
+	border: none;
+}
+
+.value {
+	position: relative;
+	top: 7px;
+	right: 15px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: -110px;
+}
+
+.basket-price {
+	margin-bottom: 198px;
+	position: relative;
+}
+
+.basket-row td p {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+}
+
+.basket-row td button {
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	padding: 10px 34px;
+	border-radius: 8px;
+	border: 0px;
+	color: white;
+	background-color: #D68807;
+}
+
+.a .b {
+	background-color: red;
+	width: 7%;
+	height: 40px;
+	position: absolute;
+	left: 1492px;
+	transform: rotate(45deg);
+}
+
+.a .b:hover {
+	position: absolute;
+	left: 1650px;
+	transition-property: left;
+	transition-duration: 2s;
+	transition-timing-function: ease;
+}
+
+/*/////////////age-check//////*/
+
+.age-check-content {
+	position: absolute;
+	z-index: 5000;
+	height: 35%;
+	width: 100%;
+	/*visibility: hidden;*/
+	background-image: url(../ressources-Botml/image/pics/bg-age-check.gif);
+	background-size: cover;
+	background-repeat: repeat;
+}
+.hidden{
+	visibility: hidden;
+}
+
+.age-check-forms {
+	display: block;
+	margin: 29% 4%;
+	text-align: center;
+	height: 150px;
+	padding: 0px 0px 45px;
+	border: 3px solid white;
+	background-color: white;
+	border-radius: 150px;
+}
+.select-content{
+	position:relative;
+	top: -10px;
+	display: inline;
+	font-family: var(--main-typo);
+	text-transform: uppercase;
+	color: #D68807;
+}
+.logo-form-age-check {
+	position: relative;
+    top: -95px;
+	display: block;
+	margin: 0px auto;
+    z-index: 100;
+    width: 250px;
+}
+
+.age-check-content h1 {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: -85px;
+	color: #D68807;
+}
+
+.age-check-content input {
+	display: flex;
+	margin: 10px auto;
+}
+
+iframe {
+	margin-top: -24px;
+	width: 100%;
+	height: 650px;
+	border: none;
+}
+/*::::::::::::formcrud:::::::::::::::*/
+.form-crud textarea,input,select{
+	padding-right: 130px;
+}

@@ -1,0 +1,93 @@
+<?php include "header.inc.php"; ?>
+
+<main class="nos-bieres-focus">
+
+	<article class="focus">
+
+		<section class="product-beer">
+			<div class="beer-animation">
+				<img src="../ressources-Botml/image/beers/<?php echo ($product['productPicture']); ?>" alt="bottle">
+			</div>
+		</section>
+
+		<div class="news-beer-number-desktop">
+				<img src="../ressources-Botml/image/numbers/<?php echo $decade; ?>.png" alt="numero">
+				<img src="../ressources-Botml/image/numbers/<?php echo $unit; ?>.png" alt="numero">
+				
+		</div>
+
+		<!--<div class="news-beer-number-desktop">
+				<img src="../ressources-Botml/image/numbers/0.png">
+				<img src="../ressources-Botml/image/numbers/1.png">
+		</div>-->
+
+		<h1><?php echo ($product['productName']); ?></h1>
+		<h2><?php echo ($product['productQuote']); ?></h2>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+
+		<section class="quantity">
+
+		<form class="value">
+  			<div class="value-button" id="decrease" value="Decrease Value">-</div>
+  			<input type="number" id="number" value="0" />
+  			<div class="value-button" id="increase" value="Increase Value">+</div>
+		</form>
+
+		</section>
+
+		<p class="price"><?php echo ($product['productPrice']); ?>€</p>
+		<a class="btn-style-botml">ajouter au panier</a>
+
+
+
+		<article class="desc-beer">
+			<h3>Un peu plus de details...</h3>
+			<p><?php echo ($product['productDescription']); ?></p>
+
+			<ul>
+				<li>Style: <?php echo ($product['productStyle']); ?></li>
+				<li>ABV: <?php echo ($product['productAbv']); ?></li>
+				<li>Hops: <?php echo ($product['productHops']); ?></li>
+				<li>Malt: <?php echo ($product['productMalt']); ?></li>
+				<li>Ingredient:<?php echo ($product['productIngredient']); ?></li>
+			</ul>
+
+		</article>
+	</article>
+	<div class="separator">
+		<p>On n'en a d'autres</p>
+	</div>
+
+	<section class="all-beer-products">
+
+	<?php foreach($packs as $pack): ?>
+
+		<article class="beer-article">
+
+			<a href="nos-bieres-focus-db.php?id=<?php echo ($pack['productId']);?>">
+				<img src="../ressources-Botml/image/beers/<?php echo ($pack['productPicture']); ?>" alt="bottle">
+			</a>
+
+			<h2 id="beer-name"><?php echo ($pack['productName']) ?></h2>
+
+			<h3 id="beer-style"><?php echo ($pack['productStyle']) ?></h3>
+
+			<p id="beer-price">A partir de <?php echo ($pack['productPrice']); ?>€</p>
+
+			<a class="btn-style-botml" href="nos-bieres-focus-db.php?id=<?php echo ($pack['productId']); ?>">voir ce produit</a>
+
+		</article>
+
+	<?php endforeach;?>
+
+	</section>
+</main>
+
+
+<script src="../JS-BOTML/bieres-focus-value.js"></script>
+
+<?php include "footer.inc.php"; ?>

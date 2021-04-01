@@ -1,0 +1,67 @@
+<?php include '../vue-php-Botml/header.inc.php' ;?>
+
+<div class="crudtable">
+
+	<table>
+		<thead>
+			<tr>
+				<th colspan="12">Liste des bieres (C.R.U.D)
+				</th>
+				<th class="v">
+					
+						<a class="b" href="../vue-php-Botml/index.php">Deconnexion</a>
+					
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-row-name">
+				<td>ID</td>
+				<td>Nom du produit</td>
+				<td>Citation du produit</td>
+				<td>Style</td>
+				<td>Prix du produit</td>
+				<td>A.B.V</td>
+				<td>Malt</td>
+				<td>Levure</td>
+				<td>Houblon</td>
+				<td>Image</td>
+				<td colspan="2"><a class="b" href="create-product.php">Créer un nouveau produit</a></td>
+				
+				<td>
+					<a class="b" href="product-db.php">Redirection vers articles</a>
+				</td>
+				
+			</tr>
+			<?php foreach($products as $product): ?>
+			<tr class="table-content">
+				
+				<td><?php echo _escape($product['productId']);?></td>
+				<td><?php echo _escape($product['productName']); ?></td>
+				<td><?php echo _escape($product['productQuote']); ?></td>
+				<td><?php echo _escape($product['productStyle']); ?></td>
+				<td><?php echo _escape($product['productPrice']); ?></td>
+				<td><?php echo _escape($product['productAbv']); ?></td>
+				<td><?php echo _escape($product['productMalt']); ?></td>
+				<td><?php echo _escape($product['productYeast']); ?></td>
+				<td><?php echo _escape($product['productHops']); ?></td>
+				<td><?php echo _escape($product['productPicture']); ?></td>
+				
+			
+				<td class="d">
+					<a class="b" href="edit-product.php?id=<?php echo _escape($product['productId']); ?>">Modifier</a>
+				</td>
+				<td class="d">
+					<a class="b" href="delete-product.php?id=<?php echo _escape($product['productId']); ?>">Supprimer</a>
+				</td>
+				<td class="d">
+					<a class="b" href="nos-bieres-focus-db.php?id=<?php echo _escape($product['productId']); ?>">Redirection vers l'article</a>
+				</td>
+			
+				
+			</tr>
+			<?php endforeach; ?>
+		<tbody>
+	</table>
+</div>
+

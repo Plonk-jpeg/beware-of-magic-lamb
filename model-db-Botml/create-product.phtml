@@ -1,0 +1,92 @@
+<?php include '../vue-php-Botml/header.inc.php'; ?>
+
+<h1>Nouveau produit</h1>
+
+<form class="form-crud" action="create-product.php" method="post" enctype="multipart/form-data">
+		
+		<label for="nom">Entrer le nom du produit</label>
+		<input type="text" name="productName" id="nom" >
+
+		<br> <!-- Récupération de toutes les catégories de la base de données -->
+		<label for="categorie">Choisir une categorie</label>
+		
+		<select name="categoryId" id="categorie" class="form-control" >
+            <?php foreach ($productcategories as $productcategory): ?>
+                <option value="<?php echo _escape($productcategory['categoryId']); ?>"><?php echo _escape($productcategory['categoryId']); ?></option>
+            <?php endforeach ?>
+          
+           
+            <!-- Récupération de toutes les catégories de la base de données -->
+        </select>
+        
+		<br>
+		<label for="image">Choisir l'image du produit</label>
+		<input type="file" name="productPicture" id="image">
+		<br>
+		
+		<label for="prix">Entrer le prix du produit</label>
+		<input type="number" step="00.01" min="0" name="productPrice" id="prix" >€
+		<br>
+		
+		<label for="stock">Entrer le stock du produit</label>
+		<input type="number" min=0 name="productQuantity" id="stock" >
+		<br>
+		
+		<label for="citation">Citation du produit</label>
+		<textarea name="productQuote" id="citation" cols="50" rows="2"></textarea>
+		<br>
+		
+		<label for="description">Description du produit</label>
+		<textarea name="productDescription" id="description" cols="50" rows="10" ></textarea>
+		<br>
+		
+		<!-- Récupération de tout les styles de la base de données -->
+		<label for="styles">Choisir un style</label>
+		<select name="productStyle" id="styles" class="form" style="padding-right: 256px;">
+			<option>Choisir un style</option>
+			<?php foreach ($productstyles as $productstyle): ?>
+			<option value="<?php echo _escape($productstyle['productStyle']); ?>"><?php echo _escape($productstyle['productStyle']); ?></option>
+			<?php endforeach ?>
+		</select>
+		<br>
+		
+		<label for="abv">L'A.B.V</label>
+		<input type="number" step="01" min="0" max="15" name="productAbv" id="abv" >
+		%
+		<br>
+		
+		<label for="hops">Type de houblon</label>
+		<select name="productHops" id="hops" class="form" >
+			<option>Choisir une variete de houblon</option>
+			<?php foreach ($producthops as $producthop): ?>
+			<option value="<?php echo _escape($producthop['productHops']); ?>"><?php echo _escape($producthop['productHops']); ?></option>
+			<?php endforeach ?>
+		</select>
+		<br>
+	
+		<label for="malts">Type de malt</label>
+		<select name="productMalt" id="malts" class="form" >
+			<option>Choisir une variete de malt</option>
+			<?php foreach ($productmalts as $productmalt): ?>
+			<option value="<?php echo _escape($productmalt['productMalt']); ?>"><?php echo _escape($productmalt['productMalt']); ?></option>
+			<?php endforeach ?>
+		</select>
+		<br>
+		
+		<label for="yeasts">Type de levure</label>
+		<select name="productYeast" id="yeasts" class="form" >
+			<option>Choisir une variete de levure</option>
+			<?php foreach ($productyeasts as $productyeast): ?>
+			<option value="<?php echo _escape($productyeast['productYeast']); ?>"><?php echo _escape($productyeast['productYeast']); ?></option>
+			<?php endforeach ?>
+		</select>
+		<br>
+		
+		<label for="ingredient">Ingredient du produit</label>
+		<textarea name="productIngredient" id="ingredient" cols="50" rows="10"></textarea>
+
+
+	<button class="btn btn-primary">Enregistrer</button>
+</form>
+
+<!--productId productPicture productPrice productName productQuote productQuantity productDescription productStyle productAbv productHops productMalt productIngredient categoryId-->

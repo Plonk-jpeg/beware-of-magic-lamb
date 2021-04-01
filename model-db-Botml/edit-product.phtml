@@ -1,0 +1,123 @@
+<?php include '../vue-php-Botml/header.inc.php';?>
+
+
+<h1>Edition d'article</h1>
+<form class="form-crud" action="edit-product.php" method="post" enctype="multipart/form-data">
+  	
+   	<!--Modif. nom du produit-->
+   	<div class="group">
+   	<div class="form-group">
+	<label for="name">Modif. nom du produit</label>
+	<textarea name="productName" id="name" cols="30" rows="1" class="form-control" ><?php echo _escape($info['productName']); ?></textarea>    
+    </div>
+    
+    <!--Modif. img du produit-->
+    <label for="image">Modif. l'image du produit</label>
+	<input type="file" name="productPicture" id="image" >
+	
+<br>
+       
+    <!--Modif. prix du produit-->
+	<label for="prix">Modif. prix du produit</label>
+	<input type="number" name="productPrice" min='0' id="prix">€
+	
+<br>
+ 	
+  	<!--Modif. citation du produit-->
+   	<div class="form-group">
+        <label for="quote">Modif. citation</label>
+        <textarea name="productQuote" id="quote" cols="30" rows="1" class="form-control" ><?php echo _escape($info['productQuote']); ?></textarea>    
+    </div>
+<br>   
+    
+    <!--Modif. quantité du produit-->
+	<label for="stock">Modif. quantité du produit</label>
+	<input type="number" name="productQuantity" min='0' id="stock">
+<br>
+ 	
+  	<!--Modif. description du produit-->
+   	<div class="form-group">
+        <label for="description">Modif. description</label>
+        <textarea name="productDescription" id="description" cols="30" rows="10" class="form-control" ><?php echo _escape($info['productDescription']); ?></textarea>    
+    </div>
+<br>
+	   	   	   	   	   
+	<!--Modif. style-->
+    <input type="hidden" name="productId" value="<?php echo ($info['productId']); ?>">
+	<label for="style">Modif. style du produit</label>
+    <select name="productStyle" id="style" class="form-control" >
+           
+    	<?php foreach ($liststyles as $liststyle): ?>
+                
+			<option value="<?= _escape($liststyle['productStyle']); ?>"><?= _escape($liststyle['productStyle']); ?></option>
+              
+    	<?php endforeach ?>
+    </select>    
+<br>
+
+    <!--Modif. ABV du produit-->
+	<label for="abv">Modif. ABV du produit</label>
+	<input type="number" name="productAbv" id="abv">%
+<br>
+   
+    <!--Modif. hops du produit-->
+    <input type="hidden" name="productId" value="<?php echo _escape($info['productId']); ?>">
+	<label for="hops">Modif. houblons du produit</label>
+    <select name="productHops" id="hops" class="form-control">
+           
+    	<?php foreach ($listhops as $listhop): ?>
+                
+			<option value="<?php echo _escape($listhop['productHops']); ?>"><?php echo _escape($listhop['productHops']); ?></option>
+              
+    	<?php endforeach ?>
+    </select>
+<br>
+    
+    <!--Modif. malt du produit-->
+    <input type="hidden" name="productId" value="<?php echo _escape($info['productId']) ?>">
+	<label for="malts">Modif. malt du produit</label>
+    <select name="productMalt" id="malts" class="form-control" >
+           
+    	<?php foreach ($listmalts as $listmalt): ?>
+                
+			<option value="<?php echo _escape($listmalt['productMalt']); ?>"><?php echo _escape($listmalt['productMalt']); ?></option>
+              
+    	<?php endforeach ?>
+    </select>
+<br>
+ 
+	<!--Modif. levure du produit-->
+    <input type="hidden" name="productId" value="<?php echo _escape($info['productId']); ?>">
+	<label for="yeast">Modif. levure du produit</label>
+    <select name="productYeast" id="yeast" class="form-control" >
+           
+    	<?php foreach ($listyeasts as $listyeast): ?>
+                
+			<option value="<?= _escape($listyeast['productYeast']); ?>"><?= _escape($listyeast['productYeast']); ?></option>
+              
+    	<?php endforeach ?>
+    </select>
+<br>   
+    <!--Modif. ingrdt du produit-->
+   	<div class="form-group">
+        <label for="ingredient">Modif. ingredient</label>
+        <textarea name="productIngredient" id="ingredient" cols="30" rows="15" class="form-control" ><?= $info['productIngredient'] ?></textarea>    
+    </div>
+<br>
+    
+    <!--Modif. category-->
+    <input type="hidden" name="productId" value="<?php echo _escape($info['productId']); ?>">
+	<label for="category">Modif. categorie du produit</label>
+    <select name="categoryId" id="category" class="form-control">
+           
+    	<?php foreach ($listcatgories as $listcatgorie): ?>
+                
+			<option value="<?php echo _escape($listcatgorie['categoryId']); ?>">
+            <?php echo _escape($listcatgorie['categoryId']); ?></option>
+              
+    	<?php endforeach ?>
+    </select>    
+<br>  
+  	<button class="records-modif">Enregistrer les modifications</button>
+  	</div>
+</form>

@@ -1,0 +1,68 @@
+<?php include "header.inc.php"; ?>
+
+<main class="nos-bieres">
+
+	<div class="bg-beer-color">
+		<!--couleur arr.plan-->
+	</div>
+	<section class="all-beer-products">
+
+		<?php foreach($products as $product): ?>
+
+		<article class="beer-article">
+			<span class="beer-gif-product beer-animation">
+				<a href="nos-bieres-focus-db.php?id=<?php echo _escape($product['productId']); ?>">
+					<img src="../ressources-Botml/image/beers/bottle-spin2-1024.gif" alt="bottle">
+				</a>
+			</span>
+			<h2 id="beer-name"> <?php echo _escape($product['productName']); ?></h2>
+			<h3 id="beer-style"><?php echo _escape($product['productStyle']); ?></h3>
+			<p id="beer-price">A partir de <?php echo _escape($product['productPrice']); ?>$</p>
+			<a class="btn-style-botml" href="nos-bieres-focus-db.php?id=<?php echo _escape($product['productId']);?>">voir ce produit</a>
+		</article>
+
+		<?php endforeach; ?>
+
+	</section>
+		<div class="separator">
+			<p>Les Packs</p>
+		</div>
+
+
+		<section class="all-pack">
+
+			<?php foreach($packs as $pack): ?>
+
+			<article class="beer-article">
+				<a href="nos-bieres-focus-db.php?id=<?php echo _escape($pack['productId']);?>">
+					<img src="../ressources-Botml/image/beers/<?php echo $pack['productPicture']; ?>" alt="pack">
+				</a>
+				<h2 id="beer-name"><?php echo _escape($pack['productName']); ?></h2>
+				<h3 id="beer-style"><?php echo _escape($pack['productStyle']); ?></h3>
+				<p id="beer-price">A partir de <?php echo _escape($pack['productPrice']); ?>$</p>
+				<a class="btn-style-botml" href="nos-bieres-focus-db.php?id=<?php echo _escape($pack['productId']);?>">voir ce produit</a>
+			</article>
+
+			<?php endforeach; ?>
+		</section>
+			<div class="separator">
+
+				<h2>Trier par style</h2>
+
+				<p>
+
+					<a href="product-db.php">Toutes les bieres</a>
+
+					<?php foreach ($filterstyles as $filterstyle): ?>
+					/
+					<a href="product-db.php?styleDeBiere=<?php echo _escape($filterstyle['productStyle']);?>"><?php echo _escape($filterstyle['productStyle']);?></a>
+
+					<?php endforeach; ?>
+
+				</p>
+
+			</div>
+
+
+</main>
+<?php include "footer.inc.php" ?>
